@@ -6,7 +6,7 @@ Checkboxes allow you to choosemulitple options but radio buttons only let you se
 
 .show works like a message box making the message appear
 
-
+i did a thingy
 We may need to have multiple canvases for this
 
 Go to tool box,click and drag canvas in
