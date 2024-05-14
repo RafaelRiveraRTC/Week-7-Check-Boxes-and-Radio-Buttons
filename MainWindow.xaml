@@ -1,0 +1,84 @@
+﻿<Window x:Class="Week_7_Check_Boxes_and_Radio_Buttons.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Week_7_Check_Boxes_and_Radio_Buttons"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas x:Name="canvasParent">
+        <CheckBox Content="CheckBox" Canvas.Left="340" Canvas.Top="3"/>
+        <CheckBox Content="CheckBox" Canvas.Left="340" Canvas.Top="35" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <Canvas 
+            Height="243" 
+                Width="800" Canvas.Top="191" Background="#FFD22323" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Label 
+                Content="Part 1"/>
+            <Button x:Name="btnPart1"
+                Content="Display State" 
+                    Canvas.Left="632" 
+                    Canvas.Top="95" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" 
+                    Width="99" Click="btnPart1_Click"/>
+            <Label x:Name="lblDisplayInfo"
+                Content="Label" 
+                   Canvas.Left="381" 
+                   Canvas.Top="166"/>
+            <CheckBox x:Name="chkSausage"
+                Content="Sausage" Canvas.Left="10" Canvas.Top="31" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <CheckBox x:Name="chkPepperoni"
+                Content="Pepperoni" 
+                      Canvas.Left="10" 
+                      Canvas.Top="61" 
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Top"/>
+
+            <GroupBox Height="165" 
+                      Header="GroupBox" 
+                      Width="152" 
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Top" 
+                      Canvas.Top="76">
+                <StackPanel Height="127" Margin="4,0,-9,0">
+                    <Label x:Name="lblDisplayInfo_Copy"
+                Content="Choose Your Prefered Size" 
+                />
+                    <RadioButton x:Name="rbSmall"
+                    GroupName="grpPizzaSize"
+                        IsChecked="True"
+                        Content="Small"/>
+
+                    <RadioButton x:Name="rbmedium"
+                    GroupName="grpPizzaSize"
+                        Content="Medium"/>
+                    <RadioButton x:Name="rbLarge"
+                    GroupName="grpPizzaSize"
+                        Content="Large"/>
+                    <RadioButton x:Name="rbXLarge"
+                    GroupName="grpPizzaSize"
+                        Content="X-Large"/>
+                </StackPanel>
+            </GroupBox>
+        </Canvas>
+        <GroupBox Height="87" Header="Themes" Width="181" Canvas.Top="3">
+            <StackPanel>
+                <RadioButton x:Name="rbWhite"
+                        IsChecked="True"
+                        Content="White" 
+                             Checked="ChangeTheme"/>
+                <RadioButton x:Name="rbBlack"
+                     Checked="ChangeTheme"
+                    Content="Black"/>
+                <RadioButton x:Name="rbRed"
+                     Checked="ChangeTheme"
+                    Content="Red"/>
+                <RadioButton x:Name="rbBlue"
+                     Checked="ChangeTheme"
+                    Content="Blue"/>
+            </StackPanel>
+        </GroupBox>
+
+    </Canvas>
+</Window>
